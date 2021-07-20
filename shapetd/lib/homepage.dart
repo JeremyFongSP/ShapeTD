@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shapetd/enemies.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -19,9 +20,17 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
               flex: 8,
-              child: Container(
-                color: Colors.amber,
-              )),
+              child: new Stack(children: [
+                new Container(
+                  color: Colors.amber,
+                ),
+                new AnimatedContainer(
+                    duration: Duration(seconds: 2),
+                    transform: Matrix4.translationValues(0, 500, 0),
+                    child: CustomPaint(
+                      painter: Enemy(),
+                    ))
+              ])),
           Expanded(
             flex: 3,
             child: Container(
