@@ -18,10 +18,10 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Expanded(
-            flex: 8,
-            child: Container(
-              color: Colors.amber,
-          ),
+              flex: 8,
+              child: Container(
+                color: Colors.amber,
+              )),
           Expanded(
             flex: 3,
             child: Container(
